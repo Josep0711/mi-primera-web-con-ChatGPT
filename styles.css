@@ -1,0 +1,214 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+nav {
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicios {
+    background-color: white;
+    padding: 95px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    position: relative; /* Necesario para el posicionamiento absoluto de los botones */
+}
+
+#carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#carousel img {
+    width: 100%;
+    display: none;
+}
+
+#carousel img.active {
+    display: block;
+}
+
+#prevBtn, #nextBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#prevBtn {
+    left: 10px;
+}
+
+#nextBtn {
+    right: 10px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para los íconos de las flechas */
+#prevBtn::before, #nextBtn::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+}
+
+#prevBtn::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent white transparent transparent;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+#nextBtn::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+#prevBtn, #nextBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px; /* Aumentar el valor de padding para hacer los círculos más grandes */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.contacto, .nosotros, .ubicacion {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Margen automático para centrar horizontalmente */
+    max-width: 600px; /* Ancho máximo para evitar que el contenido se extienda demasiado */
+}
+
+.contacto h2, .nosotros h2, .ubicacion h2 {
+    color: #4CAF50; /* Color verde para los títulos */
+}
+
+.contacto p, .nosotros p, .ubicacion p {
+    color: #666; /* Color gris oscuro para el texto */
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 750px) {
+    .servicios {
+        padding: 20px;
+    }
+    .contacto, .nosotros, .ubicacion {
+        max-width: 300px;
+    }
+  }
